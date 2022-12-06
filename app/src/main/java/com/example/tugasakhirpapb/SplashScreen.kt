@@ -10,9 +10,9 @@ import android.view.WindowManager
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportActionBar?.hide()
 
         window.setFlags(
@@ -24,6 +24,6 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
             finish()
-        }, 3500L)
+        }, 2000L)
     }
 }

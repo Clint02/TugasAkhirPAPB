@@ -76,7 +76,7 @@ class Login : AppCompatActivity() {
 
     private fun callActivity() {
         val username = findViewById<EditText>(R.id.et_email).text.toString()
-        val intent = Intent(this, HomeActivity::class.java).also {
+        val intent = Intent(this, MainActivity::class.java).also {
             it.putExtra("username", username)
         }
         startActivity(intent)
