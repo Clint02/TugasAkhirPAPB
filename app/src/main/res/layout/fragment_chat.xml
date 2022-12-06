@@ -13,26 +13,46 @@
         android:paddingTop="48dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:text="Chat"
+            android:text="Pesan"
             android:textColor="@color/primary"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            app:alignItems="center"
+            app:justifyContent="space_between"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:srcCompat="@drawable/search_chat" />
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <EditText
+                android:id="@+id/search_chat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:drawableRight="@drawable/ic_search"
+                android:hint="Cari pesan atau dokter"
+                android:inputType="text"
+                android:paddingLeft="30dp"
+                android:paddingRight="12dp"
+                android:textColorHint="#888888"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </com.google.android.flexbox.FlexboxLayout>
 
         <TextView
             android:id="@+id/textView2"
@@ -45,7 +65,7 @@
             android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/sub_header" />
 
         <TextView
             android:id="@+id/textView3"
@@ -53,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
-            android:text="Chat"
+            android:text="Pesan"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:textStyle="bold"
