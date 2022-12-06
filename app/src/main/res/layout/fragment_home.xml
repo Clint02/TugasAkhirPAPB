@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="24dp"
-    android:paddingTop="48dp"
-    android:paddingRight="24dp"
     android:paddingBottom="60dp"
     tools:context=".fragment.Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingTop="48dp">
 
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             app:alignItems="center"
             app:justifyContent="space_between"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,9 @@
             android:id="@+id/sub_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
             app:alignItems="center"
             app:justifyContent="space_between"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +106,9 @@
             android:id="@+id/carousel_home"
             android:layout_width="match_parent"
             android:layout_height="175dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sub_header"
@@ -114,6 +118,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
             android:text="Layanan"
             android:textColor="@color/black"
@@ -126,6 +131,7 @@
             android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/btn_rs"
             app:layout_constraintStart_toStartOf="parent"
