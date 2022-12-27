@@ -29,6 +29,7 @@ class Login : AppCompatActivity() {
         etEmail = findViewById(R.id.et_email)
         etPassword = findViewById(R.id.et_password)
         tvSignUp = findViewById(R.id.tv_signup)
+
         btnLogin.setOnClickListener {
             val username = etEmail.text.toString()
             val password = etPassword.text.toString()
@@ -66,10 +67,10 @@ class Login : AppCompatActivity() {
     private fun login(username: String, password: String) {
         auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
-                Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show()
                 callActivity()
             } else {
-                Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_LONG).show()
             }
         }
     }

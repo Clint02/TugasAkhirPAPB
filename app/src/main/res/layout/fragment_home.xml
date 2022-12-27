@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="60dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context=".fragment.Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="48dp">
+        android:paddingTop="24dp">
 
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/header"
@@ -111,16 +112,16 @@
         </com.google.android.flexbox.FlexboxLayout>
 
         <ImageView
-            android:id="@+id/carousel_home"
+            android:id="@+id/carousel"
             android:layout_width="match_parent"
             android:layout_height="175dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="24dp"
+            android:src="@drawable/carousel_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_header"
-            app:srcCompat="@drawable/carousel_home" />
+            app:layout_constraintTop_toBottomOf="@+id/sub_header" />
 
         <TextView
             android:id="@+id/textView5"
@@ -133,7 +134,7 @@
             android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/carousel_home" />
+            app:layout_constraintTop_toBottomOf="@+id/carousel" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -155,6 +156,29 @@
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+        <Button
+            android:id="@+id/btn_add_rs"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:drawableTop="@drawable/ic_add"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:paddingBottom="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            tools:listitem="@layout/card_rs" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
